@@ -1,9 +1,11 @@
+package fr.ina.test;
+
 import org.apache.commons.cli.*;
 
-public class main {
+public class TestClass {
     public static void main(String[] args) {
         Options options = new Options();
-        options.addOption(Option.builder("h").longOpt("host").hasArg().argName("host name").desc("Host IP address").required().build());
+        options.addOption(Option.builder("h").longOpt("host").hasArg().argName("host name").desc("Host IP address").build());
         options.addOption(Option.builder("p").longOpt("port").hasArg().argName("port number").desc("Host port number").type(Integer.class).build());
         options.addOption(Option.builder("?").longOpt("help").desc("Print usage information").build());
         CommandLine cmdline;
